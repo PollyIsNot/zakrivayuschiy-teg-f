@@ -13,4 +13,359 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" 410;
+  background-image: var(--bg-color);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  font-family: var(--accent-font), sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  margin: 100px auto 98px;
+  border: var(--border);
+  background-color: #fff;
+}
+
+.header__title {
+  text-transform: uppercase;
+  font-family: var(--accent-font), monospace;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.content-section {
+  height: var(--height);
+  width: var(--width);
+}
+
+.content-image {
+  position: relative;
+  overflow: hidden;
+  max-height: 696px;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.header_text {
+  font-family: var(--accent-font), monospace;
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.card {
+  width: var(--width);
+  margin: 50px auto;
+  border: var(--border);
+  background-color: white;
+}
+
+.card__title {
+  font-weight: var(--title-weight);
+  font-size: 18px;
+  padding: 4px 10px;
+  line-height: normal;
+  font-style: normal;
+  font-variation-settings: "wght" var(--title-weight);
+}
+
+.content_image {
+  position: relative;
+  max-height: 696px;
+  overflow: hidden;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.image {
+inline-size: 100%;
+    border-top: var(--border);
+    border-bottom: var(--border);
+    max-width: 100%;
+}
+
+.label {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  opacity: 0.7 ;
+  -webkit-text-stroke: 1px var(--text-shadow);
+}
+
+@supports (text-stroke: 1px var(--text-shadow)) {
+  .label {
+    text-stroke: 1px var(--text-shadow);
+  }
+}
+
+.content__text {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 25px;
+}
+
+.card__text {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__button {
+  display: flex;
+  margin-left: auto;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: outline 0.2s ease;
+  cursor: pointer;
+  padding: 0;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s linear 0.03s;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.main-body{
+  fill: transparent;
+  transition: fill 0.3s linear;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon:hover .core {
+  transition: fill 0.2s linear;
+  fill: var(--accent-color);
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--color-fill);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--color-fill);
+  transition: fill 0.2s linear;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--color-fill);
+  transition: fill 0.2s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--color-fill);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--color-fill);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks 0.3s ease-in 0.3s;
+}
+
+.like-icon.is-liked .heart {
+  animation: like-animation 0.3s ease-in 0.1s;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  background-color: transparent;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: var(--border);
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3 ease;
+}
+
+.button__text {
+  position: relative;
+  color: var(--difference);
+  mix-blend-mode: difference;
+  font-family: var(--accent-font), sans-serif;
+  font-size: 14px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 100px auto;
+  background-color: transparent;
+}
+
+.save__button {
+  background-color: var(--card-bg);
+  display: flex;
+  gap: 8px;
+  inline-size: 335px;
+  margin: 0 auto;
+  padding: 15px 18px;
+  block-size: 55px; 
+}
+
+.save__svg {
+  width: 21px;
+  height: 21px;
+}
+
+.dialog {
+  width: clamp(341px, 353px, 353px);
+  padding: 30px;
+  background-color: #fff;
+  border: var(--border);
+}
+
+.button__ok {
+  padding: 10.5px 0;
+  justify-content: center;
+  width: 100%;
+  border: var(--border);
+  background-color: #fff;
+  text-transform: uppercase;
+}
+
+.dialog::backdrop {
+  background-color: rgba(0 0 0 / 0.76);
+}
+
+.dialog[open] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog__text {
+  flex: 1;
+  text-transform: uppercase;
+  line-height: 150%;
+  font-size: 14px;
+}
+
+.filter_1 {
+  filter: contrast(25%);
+}
+
+.filter_2 {
+  filter: grayscale(75%);
+}
+
+.filter_3 {
+  filter: hue-rotate(143deg);
+}
+
+.filter_4 {
+  filter: saturate(243%);
+}
+
+.filter_5 {
+  filter: invert(1) sepia(120%);
+}
+
+.filter_6 {
+  filter: sepia(77%);
+}
+
+.filter_7 {
+  filter: blur(1px);
+}
+
+.filter_8 {
+  filter: invert(150%);
+}
+
+@media (width <= 375px) {
+  .content-image {
+    max-height: 371px;
+  }
+
+  .image {
+    width: 100%;
+  }
+
+  .save__button {
+    flex-direction: column;
+  }
+
+  .save__svg {
+    height: 28px;
+    width: 28px;
+  }
+
+  .header__title {
+    font-size: 49px;
+  }
+
+  .header__description {
+    font-size: 14px;
+  }
 }
