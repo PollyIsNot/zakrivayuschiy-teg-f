@@ -22,7 +22,7 @@
 
 .header {
   display: flex;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), monospace;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -95,7 +95,7 @@ inline-size: 100%;
   position: absolute;
   right: 25px;
   top: 25px;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), monospace;
   font-size: 14px;
   text-transform: uppercase;
   mix-blend-mode: hard-light;
@@ -249,7 +249,7 @@ inline-size: 100%;
   position: relative;
   color: var(--difference);
   mix-blend-mode: difference;
-  font-family: var(--accent-font), sans-serif;
+  font-family: var(--accent-font), monospace;
   font-size: 14px;
 }
 
@@ -265,10 +265,8 @@ inline-size: 100%;
   background-color: var(--card-bg);
   display: flex;
   gap: 8px;
-  inline-size: 335px;
   margin: 0 auto;
   padding: 15px 18px;
-  block-size: 55px;
 }
 
 .save__svg {
