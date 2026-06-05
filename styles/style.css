@@ -154,7 +154,7 @@ inline-size: 100%;
   transition: fill 0.1s linear;
 }
 
-.main-body{
+.main-body {
   fill: transparent;
   transition: fill 0.3s linear;
 }
@@ -268,7 +268,7 @@ inline-size: 100%;
   inline-size: 335px;
   margin: 0 auto;
   padding: 15px 18px;
-  block-size: 55px; 
+  block-size: 55px;
 }
 
 .save__svg {
